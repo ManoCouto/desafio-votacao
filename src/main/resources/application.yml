@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: desafio-votacao
+  datasource:
+    url: jdbc:h2:mem:votacao-db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# porta padrão já é 8080, mas deixo explicito
+server:
+  port: 8080
