@@ -6,7 +6,6 @@ API REST para leitura da lista de indicados e vencedores da categoria Pior Filme
 
 - Java 17
 - Spring Boot 3.5
-- H2 (banco em memória)
 - Maven
 
 ## Como rodar
@@ -15,7 +14,7 @@ API REST para leitura da lista de indicados e vencedores da categoria Pior Filme
 ./mvnw spring-boot:run
 ```
 
-A aplicação sobe na porta 8080. O CSV `movielist.csv` é carregado automaticamente ao iniciar.
+A aplicação sobe na porta 8080. O CSV `movielist.csv` é lido diretamente ao receber a requisição.
 
 ## Endpoints
 
@@ -45,14 +44,6 @@ A aplicação sobe na porta 8080. O CSV `movielist.csv` é carregado automaticam
   ]
 }
 ```
-
-## Console H2
-
-Com a aplicação rodando, acesse: http://localhost:8080/h2-console
-
-- JDBC URL: `jdbc:h2:mem:votacao-db`
-- User: `sa`
-- Password: (vazio)
 
 ## Rodar os testes
 
